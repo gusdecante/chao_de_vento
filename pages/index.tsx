@@ -11,7 +11,7 @@ export default function Home() {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <section className={utilStyles.headingMd}>
+        <section>
           <p>Chão de Vento</p>
           <p>
             Ajude-nos a contar a sua história à partir de fotos{' '}
