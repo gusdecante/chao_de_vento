@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { createContext, SetStateAction, useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import {
   ChildrenProviderProps,
   UserFileContextData,
@@ -25,11 +25,11 @@ export function UserFileProvider({ children }: ChildrenProviderProps) {
     setSelectedEnum(enumSelected)
   }
 
-  async function editPost(id: number) {
-    const { data } = await axios.put(`${api}/posts/${id}`, {})
-    // console.log()
-    // setPosts(data)
-  }
+  // async function editPost(id: number) {
+  //   const { data } = await axios.put(`${api}/posts/${id}`, {})
+  //   // console.log()
+  //   // setPosts(data)
+  // }
 
   async function deletePost(id: number) {
     const { status } = await axios.delete(`${api}/posts/${id}`)
