@@ -31,7 +31,7 @@ const UserCard = () => {
     callComments,
     deletePost,
   } = useContext(UserFileContext)
-  const files = []
+  let files: [{ source: string; id: number }] | undefined
 
   const handleViewer = (selected: any) =>
     setViewer({ selected, visible: !viewer.visible })
