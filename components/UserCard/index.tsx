@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { UserFileContext } from '../contexts'
 import { ButtonAlbums, ContainerCard, InputTitle, InputBody } from './styles'
 import { User } from '../../@types/types'
