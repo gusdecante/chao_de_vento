@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
 import { Footer, MainGrid, UserCard, Title } from '../components'
 import { UserFileProvider } from '../components/contexts/index'
 
@@ -26,21 +25,10 @@ export default function Home() {
           <Title />
           <MainGrid>
             <UserCard />
-            {/* {JSON.stringify(users, null, 2)} */}
           </MainGrid>
         </section>
       </Layout>
       <Footer />
     </UserFileProvider>
-    //Dispatch<SetStateAction<undefined>>
   )
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData,
-    },
-  }
 }
